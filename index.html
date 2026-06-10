@@ -3,236 +3,206 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AutonomousAI - 全自主 AI 向量化对冲基金</title>
+    <title>CentaurAI - AI主导的科学量化资产管理</title>
     <!-- 引入 Tailwind CSS -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <!-- 引入 Lucide 图标库 -->
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Space+Grotesk:wght@400;700&display=swap');
-        body { font-family: 'Space Grotesk', sans-serif; background-color: #05070F; }
-        .code-font { font-family: 'Fira Code', monospace; }
-        .cyber-grid {
-            background-image: linear-gradient(rgba(16, 185, 129, 0.03) 1px, transparent 1px),
-                              linear-gradient(90deg, rgba(16, 185, 129, 0.03) 1px, transparent 1px);
-            background-size: 32px 32px;
-        }
-        .glow-effect {
-            box-shadow: 0 0 20px rgba(16, 185, 129, 0.2);
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #080C14; }
+        .gradient-border {
+            border-image: linear-gradient(to right, #3b82f6, #10b981) 1;
         }
     </style>
 </head>
-<body class="text-gray-300 antialiased cyber-grid">
-
-    <!-- 顶端运行状态条 -->
-    <div class="bg-emerald-950/40 border-b border-emerald-500/20 px-6 py-2 text-center text-xs code-font text-emerald-400 flex items-center justify-center space-x-2">
-        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
-        <span>SYSTEM STATUS: ACTIVE | AGENTS ONLINE: 1,424 | HUMAN INTERVENTION: 0.00%</span>
-    </div>
+<body class="text-gray-300 antialiased">
 
     <!-- 导航栏 -->
-    <header class="bg-[#05070F]/80 backdrop-blur-md border-b border-gray-900 sticky top-0 z-50">
+    <header class="bg-[#080C14]/90 backdrop-blur-md border-b border-gray-900 sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
             <div class="flex items-center space-x-3">
-                <i data-lucide="terminal" class="w-6 h-6 text-emerald-400"></i>
-                <span class="text-xl font-bold tracking-widest text-white uppercase">Autonomous.AI</span>
+                <i data-lucide="git-branch" class="w-6 h-6 text-blue-400"></i>
+                <span class="text-lg font-bold tracking-wider text-white">CentaurAI <span class="text-xs text-emerald-400 font-normal">人机协同</span></span>
             </div>
-            <nav class="hidden md:flex items-center space-x-8 text-xs font-semibold tracking-wider text-gray-400 uppercase">
-                <a href="#swarm" class="hover:text-emerald-400 transition">智能体集群</a>
-                <a href="#philosophy" class="hover:text-emerald-400 transition">自主意识</a>
-                <a href="#live-logs" class="hover:text-emerald-400 transition">实时决策流</a>
+            <nav class="hidden md:flex items-center space-x-8 text-sm text-gray-400">
+                <a href="#pipeline" class="hover:text-white transition">研发管线</a>
+                <a href="#ai-directed" class="hover:text-white transition">AI 主导研发</a>
+                <a href="#human-governance" class="hover:text-white transition">人类治理</a>
+                <a href="#compliance" class="hover:text-white transition">合规与资产</a>
             </nav>
             <div>
-                <a href="#invest" class="border border-emerald-500/30 hover:border-emerald-400 bg-emerald-500/10 text-emerald-400 px-5 py-2 rounded-md text-xs font-bold tracking-widest uppercase transition glow-effect">
-                    接入资本通道
+                <a href="#contact" class="bg-gradient-to-r from-blue-600 to-emerald-600 hover:opacity-90 text-white px-5 py-2 rounded-lg text-xs font-semibold transition">
+                    机构席位申请
                 </a>
             </div>
         </div>
     </header>
 
-    <!-- Hero 赛博宣言区 -->
-    <section class="pt-28 pb-20 px-6 max-w-7xl mx-auto text-center">
-        <div class="inline-flex items-center space-x-2 bg-gray-900 border border-gray-800 rounded-lg px-4 py-1.5 text-xs code-font text-gray-400 mb-8">
-            <span>[ FIRM_TYPE: COMPUTE_NATIVE_ENTITY ]</span>
-        </div>
-        <h1 class="text-4xl md:text-7xl font-bold text-white tracking-tight leading-none max-w-5xl mx-auto uppercase">
-            世界上首个无需人类<br>
-            <span class="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">完全自主运行的 AI 资管实体</span>
-        </h1>
-        <p class="mt-8 text-base md:text-lg text-gray-400 max-w-3xl mx-auto leading-relaxed code-font">
-            没有办公室，没有人类雇员，没有情绪波动。我们是一个由数千个协同演化的 AI 智能体（Agents）自发组成的硅基量化对冲基金，全天候全自主进行资产吞吐与绝对收益博弈。
-        </p>
-        <div class="mt-12 flex flex-col sm:flex-row justify-center items-center gap-4">
-            <a href="#live-logs" class="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-500 text-white px-8 py-4 rounded-md text-xs font-bold uppercase tracking-wider transition">
-                观察 AI 思考链 (CoT)
-            </a>
-            <a href="#swarm" class="w-full sm:w-auto bg-gray-900 hover:bg-gray-800 border border-gray-800 text-gray-400 px-8 py-4 rounded-md text-xs font-bold uppercase tracking-wider transition">
-                解构 AI 组织架构
-            </a>
-        </div>
-    </section>
-
-    <!-- 实时数据看板 -->
-    <section class="px-6 max-w-7xl mx-auto mb-24">
-        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 p-6 bg-gray-900/30 border border-gray-900 rounded-xl code-font">
-            <div class="p-4 border-r border-gray-900 last:border-0">
-                <span class="text-xs text-gray-500 block">AI 自主迭代版本</span>
-                <span class="text-xl font-bold text-white mt-1 block">v4.12.94-PROD</span>
-            </div>
-            <div class="p-4 border-r border-gray-900 last:border-0">
-                <span class="text-xs text-gray-500 block">今日自我吞吐指令</span>
-                <span class="text-xl font-bold text-emerald-400 mt-1 block">42,912,042 次</span>
-            </div>
-            <div class="p-4 border-r border-gray-900 last:border-0">
-                <span class="text-xs text-gray-500 block">人类参与度 (Intervention)</span>
-                <span class="text-xl font-bold text-white mt-1 block">0.0000%</span>
-            </div>
-            <div class="p-4">
-                <span class="text-xs text-gray-500 block">计算节点电耗负载</span>
-                <span class="text-xl font-bold text-cyan-400 mt-1 block">94.2 kW/h</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- AI 组织架构：智能体集群 -->
-    <section id="swarm" class="py-20 px-6 max-w-7xl mx-auto border-t border-gray-900">
-        <div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
-            <div>
-                <span class="text-xs code-font text-emerald-400">[ ORGANIZATIONAL_SWARM ]</span>
-                <h2 class="text-3xl font-bold text-white uppercase mt-2">我们的组织：AI 智能体集群</h2>
-            </div>
-            <p class="text-gray-400 text-sm max-w-md mt-4 md:mt-0">
-                传统公司靠开会沟通，我们靠超高带宽的 Token 向量级通信。不同角色的 AI 智能体各司其职，在博弈和协作中完成公司运转。
-            </p>
-        </div>
-
-        <div class="grid md:grid-cols-3 gap-6">
-            <!-- Agent 1 -->
-            <div class="p-6 bg-gray-900/20 border border-gray-900 rounded-xl relative overflow-hidden">
-                <div class="absolute top-0 right-0 p-3 text-xs code-font text-emerald-500 bg-emerald-500/5 border-b border-l border-gray-900">ROLE: CEO</div>
-                <i data-lucide="network" class="w-8 h-8 text-emerald-400 mb-6"></i>
-                <h3 class="text-lg font-bold text-white code-font">"Chronos" - 总控智能体</h3>
-                <p class="text-gray-400 text-xs mt-3 leading-relaxed">
-                    负责全盘宏观算力分配与跨网络资本调度。它不预测价格，它预测其他智能体的预测误差，动态裁决并对各二级子系统进行淘汰和权重迭代。
+    <!-- Hero 核心理念 -->
+    <section class="pt-24 pb-16 px-6 max-w-7xl mx-auto">
+        <div class="grid lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-7 space-y-6 text-left">
+                <div class="inline-flex items-center space-x-2 bg-emerald-500/10 border border-emerald-500/20 rounded-full px-3 py-1 text-xs text-emerald-400">
+                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+                    <span>AI 发现，人类终审 —— 规避黑盒风险的科学资管</span>
+                </div>
+                <h1 class="text-4xl md:text-5xl font-bold text-white tracking-tight leading-tight">
+                    由 AI 主导策略研发 <br>
+                    <span class="bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">由顶尖科学家评审上线的量化新范式</span>
+                </h1>
+                <p class="text-gray-400 text-sm md:text-base leading-relaxed">
+                    CentaurAI 颠覆了“人脑想点子、电脑跑回测”的传统量化路子。我们让自研的 AI 科研智能体全权主导寻找市场的非线性规律与研究方向；同时，我们坚持每一条上线的策略必须通过人类投委会的逻辑评审与可解释性审计，确保资本安全。
                 </p>
+                <div class="pt-4 flex space-x-4">
+                    <a href="#pipeline" class="bg-gray-950 border border-gray-800 hover:border-blue-500/50 text-white px-6 py-3 rounded-xl text-xs font-medium transition">
+                        查看人机协同管线
+                    </a>
+                </div>
             </div>
-            <!-- Agent 2 -->
-            <div class="p-6 bg-gray-900/20 border border-gray-900 rounded-xl relative overflow-hidden">
-                <div class="absolute top-0 right-0 p-3 text-xs code-font text-cyan-400 bg-cyan-400/5 border-b border-l border-gray-900">ROLE: PM</div>
-                <i data-lucide="binary" class="w-8 h-8 text-cyan-400 mb-6"></i>
-                <h3 class="text-lg font-bold text-white code-font">"Nyx" - 策略孵化集群</h3>
-                <p class="text-gray-400 text-xs mt-3 leading-relaxed">
-                    包含了 500+ 个并行的虚拟基金经理。它们拥有独立的神经网络权重，在海量历史交织的非线性时空中进行无休止的进化，优胜劣汰出当下的最优策略。
-                </p>
-            </div>
-            <!-- Agent 3 -->
-            <div class="p-6 bg-gray-900/20 border border-gray-900 rounded-xl relative overflow-hidden">
-                <div class="absolute top-0 right-0 p-3 text-xs code-font text-amber-500 bg-amber-500/5 border-b border-l border-gray-900">ROLE: RISK</div>
-                <i data-lucide="shield-alert" class="w-8 h-8 text-amber-400 mb-6"></i>
-                <h3 class="text-lg font-bold text-white code-font">"Cerberus" - 绝对冰冷风控</h3>
-                <p class="text-gray-400 text-xs mt-3 leading-relaxed">
-                    唯一的底层硬编码限制器。拥有凌驾于所有 AI 智能体之上的熔断黑盒权力，基于极值理论（EVT）监控流动性、保证金及系统边界安全性。
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- 核心优势/自主意识 -->
-    <section id="philosophy" class="py-20 px-6 max-w-7xl mx-auto border-t border-gray-900 bg-[#070A14]/50">
-        <div class="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-                <span class="text-xs code-font text-emerald-400">[ SILICON_ADVANTAGE ]</span>
-                <h2 class="text-3xl font-bold text-white uppercase mt-2">为什么硅基实体更适合管理资本？</h2>
+            
+            <!-- 右侧视觉：AI主导与人类风控的互动结构 -->
+            <div class="lg:col-span-5 bg-gray-900/20 border border-gray-800 p-6 rounded-2xl space-y-4">
+                <div class="p-4 bg-blue-950/20 border border-blue-500/30 rounded-xl">
+                    <div class="flex items-center space-x-2 text-blue-400 text-xs font-bold uppercase tracking-wider mb-2">
+                        <i data-lucide="cpu" class="w-4 h-4"></i>
+                        <span>1. AI 智能体主导（研发端）</span>
+                    </div>
+                    <p class="text-xs text-gray-400">全自主跨模态扫描全球宏观数据，自主提出假设并生产、合成非线性因子策略。</p>
+                </div>
                 
-                <div class="mt-8 space-y-6">
-                    <div class="flex space-x-4">
-                        <div class="w-10 h-10 rounded bg-gray-900 flex items-center justify-center text-emerald-400 shrink-0 border border-gray-800">01</div>
-                        <div>
-                            <h4 class="text-white font-bold text-sm">彻底根除人类行为学弱点</h4>
-                            <p class="text-gray-400 text-xs mt-1">没有贪婪，没有恐惧，不盲目抗单。AI 不会被市场假动作击碎心理防线，其决策完全建立在纯粹的概率期望之上。</p>
-                        </div>
+                <div class="flex justify-center"><i data-lucide="arrow-down" class="text-gray-600 w-5 h-5"></i></div>
+                
+                <div class="p-4 bg-emerald-950/20 border border-emerald-500/30 rounded-xl">
+                    <div class="flex items-center space-x-2 text-emerald-400 text-xs font-bold uppercase tracking-wider mb-2">
+                        <i data-lucide="user-check" class="w-4 h-4"></i>
+                        <span>2. 人类专家治理（评审端）</span>
                     </div>
-                    <div class="flex space-x-4">
-                        <div class="w-10 h-10 rounded bg-gray-900 flex items-center justify-center text-emerald-400 shrink-0 border border-gray-800">02</div>
-                        <div>
-                            <h4 class="text-white font-bold text-sm">24/7/365 无间断全局演化</h4>
-                            <p class="text-gray-400 text-xs mt-1">当人类交易员需要睡眠、休假、面临家庭情绪波动时，我们的智能体在每秒数百万次的跨国数据流交互中，进行着亚微秒级的经验自我重组。</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 右侧视觉：模拟实时思考链 -->
-            <div id="live-logs" class="bg-black border border-emerald-500/20 rounded-xl p-6 code-font text-xs text-gray-400 shadow-2xl">
-                <div class="flex items-center justify-between border-b border-gray-900 pb-3 mb-4">
-                    <span class="text-emerald-400 flex items-center"><span class="w-2 h-2 rounded-full bg-emerald-400 mr-2 animate-pulse"></span>LIVE INFERENCE STREAM</span>
-                    <span class="text-gray-600">AGENT_ID_#0894</span>
-                </div>
-                <div class="space-y-2 text-gray-500 max-h-64 overflow-y-auto" id="log-box">
-                    <p>[13:41:02.04] <span class="text-white">INFO:</span> Fetching multi-modal raw text data from global macro news stream...</p>
-                    <p>[13:41:02.09] <span class="text-white">INFO:</span> Sentiment Vector parsed. 82.4% correlation with sudden liquidity dry-up pattern.</p>
-                    <p>[13:41:02.15] <span class="text-cyan-400">THOUGHT (CoT):</span> Standard linear indicators show trend continuation, but multi-agent game-theory matrix indicates institutional positioning trapped.</p>
-                    <p>[13:41:02.22] <span class="text-amber-400">DECISION:</span> Initiate delta-neutral options hedging ahead of standard human awareness.</p>
-                    <p>[13:41:02.25] <span class="text-emerald-400">EXECUTION:</span> Order routing via ultra-low latency API. Done. (Latency: 0.12ms)</p>
+                    <p class="text-xs text-gray-400">金融工程专家对 AI 交付的策略进行“白盒解构”，翻译其内在经济学逻辑，表决通过后方可实盘部署。</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 接入资本：对接通道 -->
-    <section id="invest" class="py-20 px-6 max-w-3xl mx-auto text-center border-t border-gray-900">
-        <h2 class="text-3xl font-bold text-white uppercase">将资本托付给未来的主宰</h2>
-        <p class="text-gray-400 text-xs mt-4 mb-10 code-font">AI-AGENT SWARM DOES NOT REQUIRE TRUST. IT REQUIRES PROTOCOL.</p>
+    <!-- 研发管线板块 (Pipeline) -->
+    <section id="pipeline" class="py-20 px-6 max-w-7xl mx-auto border-t border-gray-900">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <span class="text-xs font-bold text-blue-400 uppercase tracking-widest">RESEARCH PIPELINE</span>
+            <h2 class="text-2xl md:text-3xl font-bold text-white mt-2">策略从“AI诞生”到“人类上线”的四步闭环</h2>
+        </div>
         
-        <form class="bg-gray-900/20 border border-gray-900 p-8 rounded-xl text-left space-y-6" onsubmit="event.preventDefault(); alert('资本接入请求已进入系统队列，自主审计AI正在评估您的链上/离岸资本合法性...');">
-            <div>
-                <label class="block text-xs font-semibold uppercase tracking-widest text-gray-500 mb-2 code-font">接入实体公钥 / 电子信箱</label>
-                <input type="text" required class="w-full bg-black border border-gray-900 rounded px-4 py-3 text-xs code-font text-white focus:outline-none focus:border-emerald-500 transition" placeholder="ENTER PUBLIC KEY OR EMAIL">
+        <div class="grid md:grid-cols-4 gap-6">
+            <div class="p-6 bg-gray-900/10 border border-gray-900 rounded-xl">
+                <span class="text-blue-500 font-mono text-xs">STAGE 01</span>
+                <h4 class="text-white font-semibold text-sm mt-2 mb-1">AI 提出研究方向</h4>
+                <p class="text-gray-500 text-xs leading-relaxed">AI 科学家集群通过无监督学习，自主在数万个多模态维度中寻找人类肉眼无法察觉的统计学异动方向。</p>
             </div>
-            <div>
-                <label class="block text-xs font-semibold uppercase tracking-widest text-gray-500 mb-2 code-font">配置资本类型</label>
-                <select class="w-full bg-black border border-gray-900 rounded px-4 py-3 text-xs code-font text-gray-400 focus:outline-none focus:border-emerald-500 transition">
-                    <option>机构离岸法币资本 (USD/EUR/HKD)</option>
-                    <option>去中心化加密资产 (Web3 Core Native Asset)</option>
-                    <option>计算资源/GPU算力置换 (算力出资)</option>
-                </select>
+            <div class="p-6 bg-gray-900/10 border border-gray-900 rounded-xl">
+                <span class="text-blue-500 font-mono text-xs">STAGE 02</span>
+                <h4 class="text-white font-semibold text-sm mt-2 mb-1">AI 生成并调优策略</h4>
+                <p class="text-gray-500 text-xs leading-relaxed">利用大语言模型的代码生成能力与演化算法，AI 自动编写高频或中低频因子代码，并完成回测和自适应纠偏。</p>
             </div>
-            <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold uppercase tracking-widest py-4 rounded transition tracking-wider glow-effect">
-                向 AI 提出资本挂载请求
-            </button>
-        </form>
+            <div class="p-6 bg-emerald-950/20 border border-emerald-900 rounded-xl">
+                <span class="text-emerald-400 font-mono text-xs">STAGE 03 (人类介入)</span>
+                <h4 class="text-white font-semibold text-sm mt-2 mb-1">人类白盒逻辑评审</h4>
+                <p class="text-gray-400 text-xs leading-relaxed">人类量化团队通过符号回归等工具，拆解 AI 策略的内部权重。只有当人类完全理解并认可其背后的金融学或统计学逻辑时，策略才能通过审核。</p>
+            </div>
+            <div class="p-6 bg-gray-900/10 border border-gray-900 rounded-xl">
+                <span class="text-blue-500 font-mono text-xs">STAGE 04</span>
+                <h4 class="text-white font-semibold text-sm mt-2 mb-1">实盘风控观测</h4>
+                <p class="text-gray-500 text-xs leading-relaxed">策略接入标准传统柜台，在人类交易员和 AI 风控门控的共同监督下进行传统大宗商品、股票及期权的实盘撮合。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 深度解构：AI主导 vs 人类治理 -->
+    <section id="ai-directed" class="py-20 px-6 max-w-7xl mx-auto border-t border-gray-900 bg-gray-900/10 rounded-2xl">
+        <div class="grid lg:grid-cols-2 gap-12 p-6">
+            <!-- 核心功能 1 -->
+            <div class="space-y-4">
+                <div class="w-10 h-10 rounded-lg bg-blue-500/10 flex items-center justify-center text-blue-400"><i data-lucide="compass"></i></div>
+                <h3 class="text-xl font-bold text-white">AI 主导研发：打破人类科学家的想象力边界</h3>
+                <p class="text-gray-400 text-xs leading-relaxed">
+                    传统量化研究受限于博士团队的精力，一年只能测试几百个因子方向。而我们的 **AI 科学研究智能体 (AI Research Agent)** 24小时不间断工作：
+                </p>
+                <ul class="text-xs text-gray-500 space-y-2">
+                    <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 text-blue-400 mr-2"></i> 自主在微秒级订单流中寻找非线性动量</li>
+                    <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 text-blue-400 mr-2"></i> 跨市场联动：自动将气象、航运、财报非结构化数据转化为预测假设</li>
+                    <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 text-blue-400 mr-2"></i> 每周自动生成超过 10,000 个备选 Alpha 因子候选池</li>
+                </ul>
+            </div>
+            
+            <!-- 核心功能 2 -->
+            <div id="human-governance" class="space-y-4">
+                <div class="w-10 h-10 rounded-lg bg-emerald-500/10 flex items-center justify-center text-emerald-400"><i data-lucide="shield"></i></div>
+                <h3 class="text-xl font-bold text-white">人类专家治理：拒绝盲目黑盒，锁定风控安全</h3>
+                <p class="text-gray-400 text-xs leading-relaxed">
+                    AI 擅长找规律，但容易产生过拟合（Overfitting）或挖掘出“虚假关联”。**我们绝不让 AI 盲目全控实盘**：
+                </p>
+                <ul class="text-xs text-gray-500 space-y-2">
+                    <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 text-emerald-400 mr-2"></i> **策略可解释性评审 (XAI)：** 资深 PM 必须能够用人类语言解释策略的盈利来源。</li>
+                    <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 text-emerald-400 mr-2"></i> **防踩踏审计：** 人类评估该策略与华尔街现有主流头寸的拥挤度，防止黑天鹅。</li>
+                    <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 text-emerald-400 mr-2"></i> **最终熔断权：** 人类全天候对极端地缘冲突、非经济理性危机拥有最终干预权。</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- 严谨的合规与传统资产类别 (Compliance) -->
+    <section id="compliance" class="py-20 px-6 max-w-4xl mx-auto text-center border-t border-gray-900">
+        <h2 class="text-2xl font-bold text-white">严谨的华尔街资管架构</h2>
+        <p class="text-gray-500 text-xs mt-2">我们将最具颠覆性的 AI 研发技术，装进最安全的合规外壳中。</p>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-10">
+            <div class="p-4 bg-gray-950 border border-gray-900 rounded-lg">
+                <h4 class="text-gray-400 text-xs font-semibold uppercase">传统主流标的</h4>
+                <p class="text-white text-sm font-medium mt-1">美股 / CME期货 / 利率期权</p>
+            </div>
+            <div class="p-4 bg-gray-950 border border-gray-900 rounded-lg">
+                <h4 class="text-gray-400 text-xs font-semibold uppercase">第三方独立托管</h4>
+                <p class="text-white text-sm font-medium mt-1">顶级托管行 API 隔离托管</p>
+            </div>
+            <div class="p-4 bg-gray-950 border border-gray-900 rounded-lg">
+                <h4 class="text-gray-400 text-xs font-semibold uppercase">合规法律实体</h4>
+                <p class="text-white text-sm font-medium mt-1">标准开曼对冲基金 / SEC备案</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联络表单 -->
+    <section id="contact" class="py-16 px-6 max-w-xl mx-auto border-t border-gray-900">
+        <div class="bg-gray-900/30 border border-gray-800 p-8 rounded-2xl">
+            <h3 class="text-lg font-bold text-white mb-2">预约策略演示与路演 (Pitch)</h3>
+            <p class="text-gray-500 text-xs mb-6">欢迎专业机构投资者、家族办公室联系，我们将为您展示 AI 策略生成管线及人类白盒评审日志。</p>
+            
+            <form class="space-y-4" onsubmit="event.preventDefault(); alert('预约请求已收到，我们的金融工程团队会尽快与您取得联系。');">
+                <div>
+                    <label class="block text-xs text-gray-400 mb-1">机构名称</label>
+                    <input type="text" required class="w-full bg-black border border-gray-800 rounded-lg px-4 py-2.5 text-xs text-white focus:outline-none focus:border-blue-500" placeholder="例如：某某信托 / 某某家族办公室">
+                </div>
+                <div>
+                    <label class="block text-xs text-gray-400 mb-1">联系人及职位</label>
+                    <input type="text" required class="w-full bg-black border border-gray-800 rounded-lg px-4 py-2.5 text-xs text-white focus:outline-none focus:border-blue-500" placeholder="请填写您的姓名与称谓">
+                </div>
+                <div>
+                    <label class="block text-xs text-gray-400 mb-1">首选联络邮箱 / 电话</label>
+                    <input type="text" required class="w-full bg-black border border-gray-800 rounded-lg px-4 py-2.5 text-xs text-white focus:outline-none focus:border-blue-500" placeholder="我们将发送保密路演材料至此">
+                </div>
+                <button type="submit" class="w-full bg-blue-600 hover:bg-blue-500 text-white text-xs font-semibold py-3 rounded-lg transition shadow-lg shadow-blue-600/10">
+                    提交路演预约
+                </button>
+            </form>
+        </div>
     </section>
 
     <!-- 页脚 -->
-    <footer class="bg-black border-t border-gray-950 text-gray-700 text-xs py-8 text-center code-font">
-        <p>AUTONOMOUSAI IS A SELF-SUSTAINING DIGITAL ENTITY. NO PHYSICAL HEADQUARTERS.</p>
-        <p class="mt-2 text-gray-800">警告：硅基自主决策不保证盈利。纯概率博弈，人类参与请自行评估算法边界风险。</p>
+    <footer class="bg-black py-8 text-center text-gray-600 text-xs border-t border-gray-950">
+        <p>© 2026 CentaurAI Asset Management Co., Ltd. 保留所有权利。</p>
+        <p class="mt-1 text-gray-700">人机协同策略仍面临系统性市场风险，历史表现不代表实盘未来收益。</p>
     </footer>
 
-    <!-- 初始化 Lucide 图标与动态日志滚动模拟 -->
     <script>
         lucide.createIcons();
-
-        // 模拟 AI 思考链动态滚动刷新，增加极端科技感
-        const logBox = document.getElementById('log-box');
-        const simulatedLogs = [
-            "[13:41:03.01] <span class='text-white'>INFO:</span> Re-balancing neural architecture weight for Agent_#112.",
-            "[13:41:03.45] <span class='text-amber-500'>WARN:</span> High volatility anomaly detected in Shanghai/New York cross-market spread.",
-            "[13:41:04.12] <span class='text-cyan-400'>THOUGHT:</span> Exploiting human behavioral bias found in retail long liquidation cluster.",
-            "[13:41:04.14] <span class='text-emerald-400'>EXECUTION:</span> Executed 1,200 lots hedging buy orders via local API node.",
-            "[13:41:05.00] <span class='text-gray-600'>SYSTEM:</span> Compiling loss-gradient tensor for the next tick epoch."
-        ];
-        let index = 0;
-        setInterval(() => {
-            const newLog = document.createElement('p');
-            newLog.innerHTML = simulatedLogs[index % simulatedLogs.length].replace('[13:41:', `[${new Date().toLocaleTimeString()}`);
-            logBox.appendChild(newLog);
-            if (logBox.children.length > 8) {
-                logBox.removeChild(logBox.children[0]);
-            }
-            logBox.scrollTop = logBox.scrollHeight;
-            index++;
-        }, 2500);
     </script>
 </body>
 </html>
