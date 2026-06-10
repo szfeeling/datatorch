@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlphaAI - AI原生量化交易平台与策略专家</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; background-color: #0B0F19; }
+        .radial-gradient-bg {
+            background: radial-gradient(circle at 50% -20%, rgba(59, 130, 246, 0.15) 0%, rgba(11, 15, 25, 0) 60%);
+        }
+    </style>
+</head>
+<body class="text-gray-200 antialiased radial-gradient-bg">
+
+    <header class="fixed top-0 left-0 right-0 z-50 bg-[#0B0F19]/80 backdrop-blur-md border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <i data-lucide="cpu" class="w-8 h-8 text-blue-500 animate-pulse"></i>
+                <span class="text-xl font-bold tracking-wider text-white">AlphaAI</span>
+            </div>
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-gray-400">
+                <a href="#features" class="hover:text-blue-400 transition">平台优势</a>
+                <a href="#strategies" class="hover:text-blue-400 transition">AI 策略</a>
+                <a href="#architecture" class="hover:text-blue-400 transition">技术架构</a>
+                <a href="#contact" class="hover:text-blue-400 transition">合作洽谈</a>
+            </nav>
+            <div>
+                <a href="#contact" class="bg-blue-600 hover:bg-blue-500 text-white px-5 py-2.5 rounded-lg text-sm font-semibold transition shadow-lg shadow-blue-600/20">
+                    申请试用
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section class="pt-40 pb-24 px-6 max-w-7xl mx-auto text-center">
+        <div class="inline-flex items-center space-x-2 bg-blue-500/10 border border-blue-500/30 rounded-full px-4 py-1.5 text-xs font-medium text-blue-400 mb-6">
+            <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+            <span>下一代 AI 驱动的量化交易新范式</span>
+        </div>
+        <h1 class="text-4xl md:text-6xl font-extrabold text-white tracking-tight leading-tight max-w-4xl mx-auto">
+            让大模型与深度学习 <br><span class="bg-gradient-to-r flow-root from-blue-400 to-indigo-400 bg-clip-text text-transparent">重塑您的量化投资回报</span>
+        </h1>
+        <p class="mt-6 text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed">
+            AlphaAI 是国内领先的 AI 原生量化交易平台。我们放弃了传统的线性因子模型，全面拥抱强化学习与多模态大模型，为机构与高净值客户提供无感应变的绝对收益策略。
+        </p>
+        <div class="mt-10 flex flex-col sm:flex-row justify-center items-center gap-4">
+            <a href="#strategies" class="w-full sm:w-auto bg-blue-600 hover:bg-blue-500 text-white px-8 py-4 rounded-xl font-medium transition shadow-xl shadow-blue-600/20">
+                浏览 AI 策略库
+            </a>
+            <a href="#architecture" class="w-full sm:w-auto bg-gray-800 hover:bg-gray-700 border border-gray-700 text-gray-300 px-8 py-4 rounded-xl font-medium transition">
+                了解核心技术
+            </a>
+        </div>
+        
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto mt-20 p-8 rounded-2xl bg-gray-900/40 border border-gray-800/60 backdrop-blur-sm">
+            <div>
+                <p class="text-3xl font-bold text-white">¥150亿+</p>
+                <p class="text-xs text-gray-500 mt-1">AI 托管总规模 (AUM)</p>
+            </div>
+            <div>
+                <p class="text-3xl font-bold text-blue-400">24.8%</p>
+                <p class="text-xs text-gray-500 mt-1">年化复合回测收益</p>
+            </div>
+            <div>
+                <p class="text-3xl font-bold text-white">&lt; 3.5%</p>
+                <p class="text-xs text-gray-500 mt-1">历史最大回撤</p>
+            </div>
+            <div>
+                <p class="text-3xl font-bold text-emerald-400">0.2ms</p>
+                <p class="text-xs text-gray-500 mt-1">AI 推理时延</p>
+            </div>
+        </div>
+    </section>
+
+    <hr class="border-gray-900">
+
+    <section id="features" class="py-24 px-6 max-w-7xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <h2 class="text-3xl font-bold text-white">为什么选择 AI 原生量化？</h2>
+            <p class="text-gray-400 mt-4">传统量化依赖人工找因子，而 AI 原生从底层打破天花板，实现非线性市场的自我进化。</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="p-8 rounded-2xl bg-gray-900/30 border border-gray-800 hover:border-blue-500/50 transition group">
+                <div class="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center text-blue-400 mb-6 group-hover:bg-blue-600 group-hover:text-white transition-all">
+                    <i data-lucide="brain-circuit"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-white mb-3">多模态大模型感知</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">
+                    不仅处理 K 线数据，更实时解析全球财报、新闻流、社交媒体和政策动向，将非结构化文本转化为毫秒级交易信号。
+                </p>
+            </div>
+            <div class="p-8 rounded-2xl bg-gray-900/30 border border-gray-800 hover:border-blue-500/50 transition group">
+                <div class="w-12 h-12 rounded-xl bg-indigo-500/10 flex items-center justify-center text-indigo-400 mb-6 group-hover:bg-indigo-600 group-hover:text-white transition-all">
+                    <i data-lucide="activity"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-white mb-3">端到端强化学习</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">
+                    拒绝传统固定规则。AI 代理在模拟环境中进行亿级博弈训练，直接输出交易指令，动态适应极端市场切换。
+                </p>
+            </div>
+            <div class="p-8 rounded-2xl bg-gray-900/30 border border-gray-800 hover:border-blue-500/50 transition group">
+                <div class="w-12 h-12 rounded-xl bg-purple-500/10 flex items-center justify-center text-purple-400 mb-6 group-hover:bg-purple-600 group-hover:text-white transition-all">
+                    <i data-lucide="shield-check"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-white mb-3">智能风控仓位控制</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">
+                    结合神经网络对极端波动的预测，自适应动态调整杠杆和持仓水位，在锁定收益的同时将尾部风险降至最低。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="strategies" class="py-24 px-6 max-w-7xl mx-auto bg-gray-900/20 rounded-3xl border border-gray-800/80">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <h2 class="text-3xl font-bold text-white">核心 AI 策略矩阵</h2>
+            <p class="text-gray-400 mt-4">面向不同风险偏好的资金，提供多维度的量化赋能解决方案。</p>
+        </div>
+        
+        <div class="grid lg:grid-cols-2 gap-8 px-4">
+            <div class="bg-[#0B0F19] border border-gray-800 rounded-2xl p-8 flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <span class="px-2.5 py-1 bg-amber-500/10 border border-amber-500/20 text-amber-400 rounded text-xs font-semibold">高频Alpha</span>
+                            <h4 class="text-xl font-bold text-white mt-3">神经网络高频趋势跟踪策略</h4>
+                        </div>
+                        <div class="text-right">
+                            <p class="text-xs text-gray-500">预期夏普比率</p>
+                            <p class="text-xl font-bold text-emerald-400">3.8 - 4.2</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 text-sm mt-4 leading-relaxed">
+                        利用长短期记忆网络 (LSTM) 与 Transformer 架构，捕捉盘口微秒级订单流的不平衡性。适用于数字资产、股指期货等高波动市场。
+                    </p>
+                </div>
+                <div class="mt-8 pt-6 border-t border-gray-800 flex justify-between items-center text-xs text-gray-500">
+                    <span>建议容量：5 亿人民币</span>
+                    <span class="text-blue-400 cursor-pointer flex items-center">索取历史回测报告 <i data-lucide="arrow-right" class="w-3 h-3 ml-1"></i></span>
+                </div>
+            </div>
+
+            <div class="bg-[#0B0F19] border border-gray-800 rounded-2xl p-8 flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <span class="px-2.5 py-1 bg-blue-500/10 border border-blue-500/20 text-blue-400 rounded text-xs font-semibold">中低频CTA</span>
+                            <h4 class="text-xl font-bold text-white mt-3">宏观多模态大模型选股策略</h4>
+                        </div>
+                        <div class="text-right">
+                            <p class="text-xs text-gray-500">预期夏普比率</p>
+                            <p class="text-xl font-bold text-emerald-400">2.1 - 2.5</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 text-sm mt-4 leading-relaxed">
+                        基于自研的 Financial-GPT，全天候监控全球基本面指标与大宗商品供应链传导链条，构建周/月级别的全资产配置组合。
+                    </p>
+                </div>
+                <div class="mt-8 pt-6 border-t border-gray-800 flex justify-between items-center text-xs text-gray-500">
+                    <span>建议容量：50 亿人民币</span>
+                    <span class="text-blue-400 cursor-pointer flex items-center">索取历史回测报告 <i data-lucide="arrow-right" class="w-3 h-3 ml-1"></i></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="architecture" class="py-24 px-6 max-w-7xl mx-auto">
+        <div class="grid lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-5">
+                <div class="w-12 h-12 rounded-xl bg-emerald-500/10 flex items-center justify-center text-emerald-400 mb-6">
+                    <i data-lucide="layers"></i>
+                </div>
+                <h2 class="text-3xl font-bold text-white tracking-tight">坚如磐石的 AI 量化原生架构</h2>
+                <p class="text-gray-400 mt-4 leading-relaxed">
+                    我们自建了高性能 GPU 计算集群与低时延交易柜台。从特征工程、分布式模型训练到最终的实盘撮合，全链路均针对 AI 矩阵运算进行了极致的硬件级加速。
+                </p>
+                
+                <ul class="mt-8 space-y-4">
+                    <li class="flex items-start space-x-3">
+                        <i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-400 shrink-0 mt-0.5"></i>
+                        <span class="text-sm text-gray-300"><strong>分布式知识图谱：</strong>包含全球 50000+ 实体节点，实时推演风险传导。</span>
+                    </li>
+                    <li class="flex items-start space-x-3">
+                        <i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-400 shrink-0 mt-0.5"></i>
+                        <span class="text-sm text-gray-300"><strong>C++ 20 实盘柜台：</strong>底层采用纯 C++ 编写，保证 AI 决策指令不被穿透延迟拖累。</span>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="lg:col-span-7 bg-gray-900/40 border border-gray-800 rounded-2xl p-6 font-mono text-xs text-gray-400">
+                <div class="flex items-center justify-between border-b border-gray-800 pb-4 mb-4">
+                    <div class="flex space-x-2">
+                        <span class="w-3 h-3 rounded-full bg-red-500/40"></span>
+                        <span class="w-3 h-3 rounded-full bg-yellow-500/40"></span>
+                        <span class="w-3 h-3 rounded-full bg-green-500/40"></span>
+                    </div>
+                    <span class="text-gray-600">alpha_agent_inference.py</span>
+                </div>
+                <p class="text-gray-500"># 实时策略推理引擎伪代码示例</p>
+                <p><span class="text-purple-400">import</span> torch</p>
+                <p><span class="text-purple-400">from</span> alpha_ai.models <span class="text-purple-400">import</span> MultiModalTransformer</p>
+                <p><span class="text-purple-400">from</span> alpha_ai.env <span class="text-purple-400">import</span> RealTimeOrderBook</p>
+                <br>
+                <p><span class="text-blue-400">class</span> <span class="text-yellow-400">TradingAgent</span>:</p>
+                <p class="pl-4"><span class="text-blue-400">def</span> <span class="text-yellow-400">__init__</span>(<span class="text-orange-400">self</span>, model_path):</p>
+                <p class="pl-8"><span class="text-orange-400">self</span>.model = MultiModalTransformer.load(model_path)</p>
+                <p class="pl-8"><span class="text-orange-400">self</span>.risk_gate = SafetyController(max_drawdown=0.035)</p>
+                <br>
+                <p class="pl-4"><span class="text-blue-400">def</span> <span class="text-yellow-400">on_market_tick</span>(<span class="text-orange-400">self</span>, tick_data, news_stream):</p>
+                <p class="pl-8"># 提取跨模态特征向量</p>
+                <p class="pl-8">features = <span class="text-orange-400">self</span>.model.encode_inputs(tick_data, news_stream)</p>
+                <p class="pl-8"># AI 生成动作概率 (Buy / Sell / Hold)</p>
+                <p class="pl-8">action_logits, target_weight = <span class="text-orange-400">self</span>.model.forward(features)</p>
+                <br>
+                <p class="pl-8"># 经过智能风控门控拦截</p>
+                <p class="pl-8"><span class="text-purple-400">if</span> <span class="text-orange-400">self</span>.risk_gate.validate(target_weight):</p>
+                <p class="pl-12 text-emerald-400"><span class="text-purple-400">return</span> <span class="text-orange-400">self</span>.execute_order(action_logits, target_weight)</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 px-6 max-w-3xl mx-auto text-center border-t border-gray-900">
+        <h2 class="text-3xl font-bold text-white">开启量化投资的新时代</h2>
+        <p class="text-gray-400 mt-4 mb-10">无论您是寻求优质阿尔法策略的基金机构，还是希望升级内生AI能力的券商，我们都提供全方位的深度定制合作。</p>
+        
+        <form class="bg-gray-900/50 border border-gray-800 p-8 rounded-2xl text-left space-y-6 backdrop-blur-sm" onsubmit="event.preventDefault(); alert('信息已收到，我们的量化客户经理会在 24 小时内与您联系！');">
+            <div class="grid sm:grid-cols-2 gap-6">
+                <div>
+                    <label class="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">机构名称 / 贵姓</label>
+                    <input type="text" required class="w-full bg-[#0B0F19] border border-gray-800 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-blue-500 transition" placeholder="例如：某某私募基金">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">联系方式 (微信/手机/邮箱)</label>
+                    <input type="text" required class="w-full bg-[#0B0F19] border border-gray-800 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-blue-500 transition" placeholder="请留下您的首选联系方式">
+                </div>
+            </div>
+            <div>
+                <label class="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">合作意向</label>
+                <select class="w-full bg-[#0B0F19] border border-gray-800 rounded-lg px-4 py-3 text-sm text-gray-300 focus:outline-none focus:border-blue-500 transition">
+                    <option>订阅 AI 策略信号矩阵</option>
+                    <option>定制化 AI 量化交易平台搭建</option>
+                    <option>联合产品发行 (FOF/MOM 合作)</option>
+                    <option>其他技术咨询</option>
+                </select>
+            </div>
+            <button type="submit" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-medium py-3 rounded-lg transition shadow-lg shadow-blue-600/10">
+                提交试用申请
+            </button>
+        </form>
+    </section>
+
+    <footer class="bg-[#070A12] border-t border-gray-900 text-gray-600 text-xs py-8 text-center">
+        <p>© 2026 AlphaAI Quantitative Technology Co., Ltd. 保留所有权利。</p>
+        <p class="mt-2 text-gray-700">投资有风险，入市需谨慎。AI 策略回测收益不代表未来实盘表现。</p>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
