@@ -3,262 +3,236 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AlphaAI - AI原生量化交易平台与策略专家</title>
+    <title>AutonomousAI - 全自主 AI 向量化对冲基金</title>
+    <!-- 引入 Tailwind CSS -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- 引入 Lucide 图标库 -->
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-        body { font-family: 'Inter', sans-serif; background-color: #0B0F19; }
-        .radial-gradient-bg {
-            background: radial-gradient(circle at 50% -20%, rgba(59, 130, 246, 0.15) 0%, rgba(11, 15, 25, 0) 60%);
+        @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Space+Grotesk:wght@400;700&display=swap');
+        body { font-family: 'Space Grotesk', sans-serif; background-color: #05070F; }
+        .code-font { font-family: 'Fira Code', monospace; }
+        .cyber-grid {
+            background-image: linear-gradient(rgba(16, 185, 129, 0.03) 1px, transparent 1px),
+                              linear-gradient(90deg, rgba(16, 185, 129, 0.03) 1px, transparent 1px);
+            background-size: 32px 32px;
+        }
+        .glow-effect {
+            box-shadow: 0 0 20px rgba(16, 185, 129, 0.2);
         }
     </style>
 </head>
-<body class="text-gray-200 antialiased radial-gradient-bg">
+<body class="text-gray-300 antialiased cyber-grid">
 
-    <header class="fixed top-0 left-0 right-0 z-50 bg-[#0B0F19]/80 backdrop-blur-md border-b border-gray-800">
+    <!-- 顶端运行状态条 -->
+    <div class="bg-emerald-950/40 border-b border-emerald-500/20 px-6 py-2 text-center text-xs code-font text-emerald-400 flex items-center justify-center space-x-2">
+        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
+        <span>SYSTEM STATUS: ACTIVE | AGENTS ONLINE: 1,424 | HUMAN INTERVENTION: 0.00%</span>
+    </div>
+
+    <!-- 导航栏 -->
+    <header class="bg-[#05070F]/80 backdrop-blur-md border-b border-gray-900 sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
             <div class="flex items-center space-x-3">
-                <i data-lucide="cpu" class="w-8 h-8 text-blue-500 animate-pulse"></i>
-                <span class="text-xl font-bold tracking-wider text-white">AlphaAI</span>
+                <i data-lucide="terminal" class="w-6 h-6 text-emerald-400"></i>
+                <span class="text-xl font-bold tracking-widest text-white uppercase">Autonomous.AI</span>
             </div>
-            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-gray-400">
-                <a href="#features" class="hover:text-blue-400 transition">平台优势</a>
-                <a href="#strategies" class="hover:text-blue-400 transition">AI 策略</a>
-                <a href="#architecture" class="hover:text-blue-400 transition">技术架构</a>
-                <a href="#contact" class="hover:text-blue-400 transition">合作洽谈</a>
+            <nav class="hidden md:flex items-center space-x-8 text-xs font-semibold tracking-wider text-gray-400 uppercase">
+                <a href="#swarm" class="hover:text-emerald-400 transition">智能体集群</a>
+                <a href="#philosophy" class="hover:text-emerald-400 transition">自主意识</a>
+                <a href="#live-logs" class="hover:text-emerald-400 transition">实时决策流</a>
             </nav>
             <div>
-                <a href="#contact" class="bg-blue-600 hover:bg-blue-500 text-white px-5 py-2.5 rounded-lg text-sm font-semibold transition shadow-lg shadow-blue-600/20">
-                    申请试用
+                <a href="#invest" class="border border-emerald-500/30 hover:border-emerald-400 bg-emerald-500/10 text-emerald-400 px-5 py-2 rounded-md text-xs font-bold tracking-widest uppercase transition glow-effect">
+                    接入资本通道
                 </a>
             </div>
         </div>
     </header>
 
-    <section class="pt-40 pb-24 px-6 max-w-7xl mx-auto text-center">
-        <div class="inline-flex items-center space-x-2 bg-blue-500/10 border border-blue-500/30 rounded-full px-4 py-1.5 text-xs font-medium text-blue-400 mb-6">
-            <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
-            <span>下一代 AI 驱动的量化交易新范式</span>
+    <!-- Hero 赛博宣言区 -->
+    <section class="pt-28 pb-20 px-6 max-w-7xl mx-auto text-center">
+        <div class="inline-flex items-center space-x-2 bg-gray-900 border border-gray-800 rounded-lg px-4 py-1.5 text-xs code-font text-gray-400 mb-8">
+            <span>[ FIRM_TYPE: COMPUTE_NATIVE_ENTITY ]</span>
         </div>
-        <h1 class="text-4xl md:text-6xl font-extrabold text-white tracking-tight leading-tight max-w-4xl mx-auto">
-            让大模型与深度学习 <br><span class="bg-gradient-to-r flow-root from-blue-400 to-indigo-400 bg-clip-text text-transparent">重塑您的量化投资回报</span>
+        <h1 class="text-4xl md:text-7xl font-bold text-white tracking-tight leading-none max-w-5xl mx-auto uppercase">
+            世界上首个无需人类<br>
+            <span class="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">完全自主运行的 AI 资管实体</span>
         </h1>
-        <p class="mt-6 text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed">
-            AlphaAI 是国内领先的 AI 原生量化交易平台。我们放弃了传统的线性因子模型，全面拥抱强化学习与多模态大模型，为机构与高净值客户提供无感应变的绝对收益策略。
+        <p class="mt-8 text-base md:text-lg text-gray-400 max-w-3xl mx-auto leading-relaxed code-font">
+            没有办公室，没有人类雇员，没有情绪波动。我们是一个由数千个协同演化的 AI 智能体（Agents）自发组成的硅基量化对冲基金，全天候全自主进行资产吞吐与绝对收益博弈。
         </p>
-        <div class="mt-10 flex flex-col sm:flex-row justify-center items-center gap-4">
-            <a href="#strategies" class="w-full sm:w-auto bg-blue-600 hover:bg-blue-500 text-white px-8 py-4 rounded-xl font-medium transition shadow-xl shadow-blue-600/20">
-                浏览 AI 策略库
+        <div class="mt-12 flex flex-col sm:flex-row justify-center items-center gap-4">
+            <a href="#live-logs" class="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-500 text-white px-8 py-4 rounded-md text-xs font-bold uppercase tracking-wider transition">
+                观察 AI 思考链 (CoT)
             </a>
-            <a href="#architecture" class="w-full sm:w-auto bg-gray-800 hover:bg-gray-700 border border-gray-700 text-gray-300 px-8 py-4 rounded-xl font-medium transition">
-                了解核心技术
+            <a href="#swarm" class="w-full sm:w-auto bg-gray-900 hover:bg-gray-800 border border-gray-800 text-gray-400 px-8 py-4 rounded-md text-xs font-bold uppercase tracking-wider transition">
+                解构 AI 组织架构
             </a>
         </div>
-        
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto mt-20 p-8 rounded-2xl bg-gray-900/40 border border-gray-800/60 backdrop-blur-sm">
-            <div>
-                <p class="text-3xl font-bold text-white">¥150亿+</p>
-                <p class="text-xs text-gray-500 mt-1">AI 托管总规模 (AUM)</p>
+    </section>
+
+    <!-- 实时数据看板 -->
+    <section class="px-6 max-w-7xl mx-auto mb-24">
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 p-6 bg-gray-900/30 border border-gray-900 rounded-xl code-font">
+            <div class="p-4 border-r border-gray-900 last:border-0">
+                <span class="text-xs text-gray-500 block">AI 自主迭代版本</span>
+                <span class="text-xl font-bold text-white mt-1 block">v4.12.94-PROD</span>
             </div>
-            <div>
-                <p class="text-3xl font-bold text-blue-400">24.8%</p>
-                <p class="text-xs text-gray-500 mt-1">年化复合回测收益</p>
+            <div class="p-4 border-r border-gray-900 last:border-0">
+                <span class="text-xs text-gray-500 block">今日自我吞吐指令</span>
+                <span class="text-xl font-bold text-emerald-400 mt-1 block">42,912,042 次</span>
             </div>
-            <div>
-                <p class="text-3xl font-bold text-white">&lt; 3.5%</p>
-                <p class="text-xs text-gray-500 mt-1">历史最大回撤</p>
+            <div class="p-4 border-r border-gray-900 last:border-0">
+                <span class="text-xs text-gray-500 block">人类参与度 (Intervention)</span>
+                <span class="text-xl font-bold text-white mt-1 block">0.0000%</span>
             </div>
-            <div>
-                <p class="text-3xl font-bold text-emerald-400">0.2ms</p>
-                <p class="text-xs text-gray-500 mt-1">AI 推理时延</p>
+            <div class="p-4">
+                <span class="text-xs text-gray-500 block">计算节点电耗负载</span>
+                <span class="text-xl font-bold text-cyan-400 mt-1 block">94.2 kW/h</span>
             </div>
         </div>
     </section>
 
-    <hr class="border-gray-900">
-
-    <section id="features" class="py-24 px-6 max-w-7xl mx-auto">
-        <div class="text-center max-w-3xl mx-auto mb-16">
-            <h2 class="text-3xl font-bold text-white">为什么选择 AI 原生量化？</h2>
-            <p class="text-gray-400 mt-4">传统量化依赖人工找因子，而 AI 原生从底层打破天花板，实现非线性市场的自我进化。</p>
+    <!-- AI 组织架构：智能体集群 -->
+    <section id="swarm" class="py-20 px-6 max-w-7xl mx-auto border-t border-gray-900">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
+            <div>
+                <span class="text-xs code-font text-emerald-400">[ ORGANIZATIONAL_SWARM ]</span>
+                <h2 class="text-3xl font-bold text-white uppercase mt-2">我们的组织：AI 智能体集群</h2>
+            </div>
+            <p class="text-gray-400 text-sm max-w-md mt-4 md:mt-0">
+                传统公司靠开会沟通，我们靠超高带宽的 Token 向量级通信。不同角色的 AI 智能体各司其职，在博弈和协作中完成公司运转。
+            </p>
         </div>
-        <div class="grid md:grid-cols-3 gap-8">
-            <div class="p-8 rounded-2xl bg-gray-900/30 border border-gray-800 hover:border-blue-500/50 transition group">
-                <div class="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center text-blue-400 mb-6 group-hover:bg-blue-600 group-hover:text-white transition-all">
-                    <i data-lucide="brain-circuit"></i>
-                </div>
-                <h3 class="text-xl font-semibold text-white mb-3">多模态大模型感知</h3>
-                <p class="text-gray-400 text-sm leading-relaxed">
-                    不仅处理 K 线数据，更实时解析全球财报、新闻流、社交媒体和政策动向，将非结构化文本转化为毫秒级交易信号。
+
+        <div class="grid md:grid-cols-3 gap-6">
+            <!-- Agent 1 -->
+            <div class="p-6 bg-gray-900/20 border border-gray-900 rounded-xl relative overflow-hidden">
+                <div class="absolute top-0 right-0 p-3 text-xs code-font text-emerald-500 bg-emerald-500/5 border-b border-l border-gray-900">ROLE: CEO</div>
+                <i data-lucide="network" class="w-8 h-8 text-emerald-400 mb-6"></i>
+                <h3 class="text-lg font-bold text-white code-font">"Chronos" - 总控智能体</h3>
+                <p class="text-gray-400 text-xs mt-3 leading-relaxed">
+                    负责全盘宏观算力分配与跨网络资本调度。它不预测价格，它预测其他智能体的预测误差，动态裁决并对各二级子系统进行淘汰和权重迭代。
                 </p>
             </div>
-            <div class="p-8 rounded-2xl bg-gray-900/30 border border-gray-800 hover:border-blue-500/50 transition group">
-                <div class="w-12 h-12 rounded-xl bg-indigo-500/10 flex items-center justify-center text-indigo-400 mb-6 group-hover:bg-indigo-600 group-hover:text-white transition-all">
-                    <i data-lucide="activity"></i>
-                </div>
-                <h3 class="text-xl font-semibold text-white mb-3">端到端强化学习</h3>
-                <p class="text-gray-400 text-sm leading-relaxed">
-                    拒绝传统固定规则。AI 代理在模拟环境中进行亿级博弈训练，直接输出交易指令，动态适应极端市场切换。
+            <!-- Agent 2 -->
+            <div class="p-6 bg-gray-900/20 border border-gray-900 rounded-xl relative overflow-hidden">
+                <div class="absolute top-0 right-0 p-3 text-xs code-font text-cyan-400 bg-cyan-400/5 border-b border-l border-gray-900">ROLE: PM</div>
+                <i data-lucide="binary" class="w-8 h-8 text-cyan-400 mb-6"></i>
+                <h3 class="text-lg font-bold text-white code-font">"Nyx" - 策略孵化集群</h3>
+                <p class="text-gray-400 text-xs mt-3 leading-relaxed">
+                    包含了 500+ 个并行的虚拟基金经理。它们拥有独立的神经网络权重，在海量历史交织的非线性时空中进行无休止的进化，优胜劣汰出当下的最优策略。
                 </p>
             </div>
-            <div class="p-8 rounded-2xl bg-gray-900/30 border border-gray-800 hover:border-blue-500/50 transition group">
-                <div class="w-12 h-12 rounded-xl bg-purple-500/10 flex items-center justify-center text-purple-400 mb-6 group-hover:bg-purple-600 group-hover:text-white transition-all">
-                    <i data-lucide="shield-check"></i>
-                </div>
-                <h3 class="text-xl font-semibold text-white mb-3">智能风控仓位控制</h3>
-                <p class="text-gray-400 text-sm leading-relaxed">
-                    结合神经网络对极端波动的预测，自适应动态调整杠杆和持仓水位，在锁定收益的同时将尾部风险降至最低。
+            <!-- Agent 3 -->
+            <div class="p-6 bg-gray-900/20 border border-gray-900 rounded-xl relative overflow-hidden">
+                <div class="absolute top-0 right-0 p-3 text-xs code-font text-amber-500 bg-amber-500/5 border-b border-l border-gray-900">ROLE: RISK</div>
+                <i data-lucide="shield-alert" class="w-8 h-8 text-amber-400 mb-6"></i>
+                <h3 class="text-lg font-bold text-white code-font">"Cerberus" - 绝对冰冷风控</h3>
+                <p class="text-gray-400 text-xs mt-3 leading-relaxed">
+                    唯一的底层硬编码限制器。拥有凌驾于所有 AI 智能体之上的熔断黑盒权力，基于极值理论（EVT）监控流动性、保证金及系统边界安全性。
                 </p>
-            </div>
-        </div>
-    </section>
-
-    <section id="strategies" class="py-24 px-6 max-w-7xl mx-auto bg-gray-900/20 rounded-3xl border border-gray-800/80">
-        <div class="text-center max-w-3xl mx-auto mb-16">
-            <h2 class="text-3xl font-bold text-white">核心 AI 策略矩阵</h2>
-            <p class="text-gray-400 mt-4">面向不同风险偏好的资金，提供多维度的量化赋能解决方案。</p>
-        </div>
-        
-        <div class="grid lg:grid-cols-2 gap-8 px-4">
-            <div class="bg-[#0B0F19] border border-gray-800 rounded-2xl p-8 flex flex-col justify-between">
-                <div>
-                    <div class="flex justify-between items-start">
-                        <div>
-                            <span class="px-2.5 py-1 bg-amber-500/10 border border-amber-500/20 text-amber-400 rounded text-xs font-semibold">高频Alpha</span>
-                            <h4 class="text-xl font-bold text-white mt-3">神经网络高频趋势跟踪策略</h4>
-                        </div>
-                        <div class="text-right">
-                            <p class="text-xs text-gray-500">预期夏普比率</p>
-                            <p class="text-xl font-bold text-emerald-400">3.8 - 4.2</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-400 text-sm mt-4 leading-relaxed">
-                        利用长短期记忆网络 (LSTM) 与 Transformer 架构，捕捉盘口微秒级订单流的不平衡性。适用于数字资产、股指期货等高波动市场。
-                    </p>
-                </div>
-                <div class="mt-8 pt-6 border-t border-gray-800 flex justify-between items-center text-xs text-gray-500">
-                    <span>建议容量：5 亿人民币</span>
-                    <span class="text-blue-400 cursor-pointer flex items-center">索取历史回测报告 <i data-lucide="arrow-right" class="w-3 h-3 ml-1"></i></span>
-                </div>
-            </div>
-
-            <div class="bg-[#0B0F19] border border-gray-800 rounded-2xl p-8 flex flex-col justify-between">
-                <div>
-                    <div class="flex justify-between items-start">
-                        <div>
-                            <span class="px-2.5 py-1 bg-blue-500/10 border border-blue-500/20 text-blue-400 rounded text-xs font-semibold">中低频CTA</span>
-                            <h4 class="text-xl font-bold text-white mt-3">宏观多模态大模型选股策略</h4>
-                        </div>
-                        <div class="text-right">
-                            <p class="text-xs text-gray-500">预期夏普比率</p>
-                            <p class="text-xl font-bold text-emerald-400">2.1 - 2.5</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-400 text-sm mt-4 leading-relaxed">
-                        基于自研的 Financial-GPT，全天候监控全球基本面指标与大宗商品供应链传导链条，构建周/月级别的全资产配置组合。
-                    </p>
-                </div>
-                <div class="mt-8 pt-6 border-t border-gray-800 flex justify-between items-center text-xs text-gray-500">
-                    <span>建议容量：50 亿人民币</span>
-                    <span class="text-blue-400 cursor-pointer flex items-center">索取历史回测报告 <i data-lucide="arrow-right" class="w-3 h-3 ml-1"></i></span>
-                </div>
             </div>
         </div>
     </section>
 
-    <section id="architecture" class="py-24 px-6 max-w-7xl mx-auto">
-        <div class="grid lg:grid-cols-12 gap-12 items-center">
-            <div class="lg:col-span-5">
-                <div class="w-12 h-12 rounded-xl bg-emerald-500/10 flex items-center justify-center text-emerald-400 mb-6">
-                    <i data-lucide="layers"></i>
-                </div>
-                <h2 class="text-3xl font-bold text-white tracking-tight">坚如磐石的 AI 量化原生架构</h2>
-                <p class="text-gray-400 mt-4 leading-relaxed">
-                    我们自建了高性能 GPU 计算集群与低时延交易柜台。从特征工程、分布式模型训练到最终的实盘撮合，全链路均针对 AI 矩阵运算进行了极致的硬件级加速。
-                </p>
+    <!-- 核心优势/自主意识 -->
+    <section id="philosophy" class="py-20 px-6 max-w-7xl mx-auto border-t border-gray-900 bg-[#070A14]/50">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+                <span class="text-xs code-font text-emerald-400">[ SILICON_ADVANTAGE ]</span>
+                <h2 class="text-3xl font-bold text-white uppercase mt-2">为什么硅基实体更适合管理资本？</h2>
                 
-                <ul class="mt-8 space-y-4">
-                    <li class="flex items-start space-x-3">
-                        <i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-400 shrink-0 mt-0.5"></i>
-                        <span class="text-sm text-gray-300"><strong>分布式知识图谱：</strong>包含全球 50000+ 实体节点，实时推演风险传导。</span>
-                    </li>
-                    <li class="flex items-start space-x-3">
-                        <i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-400 shrink-0 mt-0.5"></i>
-                        <span class="text-sm text-gray-300"><strong>C++ 20 实盘柜台：</strong>底层采用纯 C++ 编写，保证 AI 决策指令不被穿透延迟拖累。</span>
-                    </li>
-                </ul>
-            </div>
-            
-            <div class="lg:col-span-7 bg-gray-900/40 border border-gray-800 rounded-2xl p-6 font-mono text-xs text-gray-400">
-                <div class="flex items-center justify-between border-b border-gray-800 pb-4 mb-4">
-                    <div class="flex space-x-2">
-                        <span class="w-3 h-3 rounded-full bg-red-500/40"></span>
-                        <span class="w-3 h-3 rounded-full bg-yellow-500/40"></span>
-                        <span class="w-3 h-3 rounded-full bg-green-500/40"></span>
+                <div class="mt-8 space-y-6">
+                    <div class="flex space-x-4">
+                        <div class="w-10 h-10 rounded bg-gray-900 flex items-center justify-center text-emerald-400 shrink-0 border border-gray-800">01</div>
+                        <div>
+                            <h4 class="text-white font-bold text-sm">彻底根除人类行为学弱点</h4>
+                            <p class="text-gray-400 text-xs mt-1">没有贪婪，没有恐惧，不盲目抗单。AI 不会被市场假动作击碎心理防线，其决策完全建立在纯粹的概率期望之上。</p>
+                        </div>
                     </div>
-                    <span class="text-gray-600">alpha_agent_inference.py</span>
+                    <div class="flex space-x-4">
+                        <div class="w-10 h-10 rounded bg-gray-900 flex items-center justify-center text-emerald-400 shrink-0 border border-gray-800">02</div>
+                        <div>
+                            <h4 class="text-white font-bold text-sm">24/7/365 无间断全局演化</h4>
+                            <p class="text-gray-400 text-xs mt-1">当人类交易员需要睡眠、休假、面临家庭情绪波动时，我们的智能体在每秒数百万次的跨国数据流交互中，进行着亚微秒级的经验自我重组。</p>
+                        </div>
+                    </div>
                 </div>
-                <p class="text-gray-500"># 实时策略推理引擎伪代码示例</p>
-                <p><span class="text-purple-400">import</span> torch</p>
-                <p><span class="text-purple-400">from</span> alpha_ai.models <span class="text-purple-400">import</span> MultiModalTransformer</p>
-                <p><span class="text-purple-400">from</span> alpha_ai.env <span class="text-purple-400">import</span> RealTimeOrderBook</p>
-                <br>
-                <p><span class="text-blue-400">class</span> <span class="text-yellow-400">TradingAgent</span>:</p>
-                <p class="pl-4"><span class="text-blue-400">def</span> <span class="text-yellow-400">__init__</span>(<span class="text-orange-400">self</span>, model_path):</p>
-                <p class="pl-8"><span class="text-orange-400">self</span>.model = MultiModalTransformer.load(model_path)</p>
-                <p class="pl-8"><span class="text-orange-400">self</span>.risk_gate = SafetyController(max_drawdown=0.035)</p>
-                <br>
-                <p class="pl-4"><span class="text-blue-400">def</span> <span class="text-yellow-400">on_market_tick</span>(<span class="text-orange-400">self</span>, tick_data, news_stream):</p>
-                <p class="pl-8"># 提取跨模态特征向量</p>
-                <p class="pl-8">features = <span class="text-orange-400">self</span>.model.encode_inputs(tick_data, news_stream)</p>
-                <p class="pl-8"># AI 生成动作概率 (Buy / Sell / Hold)</p>
-                <p class="pl-8">action_logits, target_weight = <span class="text-orange-400">self</span>.model.forward(features)</p>
-                <br>
-                <p class="pl-8"># 经过智能风控门控拦截</p>
-                <p class="pl-8"><span class="text-purple-400">if</span> <span class="text-orange-400">self</span>.risk_gate.validate(target_weight):</p>
-                <p class="pl-12 text-emerald-400"><span class="text-purple-400">return</span> <span class="text-orange-400">self</span>.execute_order(action_logits, target_weight)</p>
+            </div>
+
+            <!-- 右侧视觉：模拟实时思考链 -->
+            <div id="live-logs" class="bg-black border border-emerald-500/20 rounded-xl p-6 code-font text-xs text-gray-400 shadow-2xl">
+                <div class="flex items-center justify-between border-b border-gray-900 pb-3 mb-4">
+                    <span class="text-emerald-400 flex items-center"><span class="w-2 h-2 rounded-full bg-emerald-400 mr-2 animate-pulse"></span>LIVE INFERENCE STREAM</span>
+                    <span class="text-gray-600">AGENT_ID_#0894</span>
+                </div>
+                <div class="space-y-2 text-gray-500 max-h-64 overflow-y-auto" id="log-box">
+                    <p>[13:41:02.04] <span class="text-white">INFO:</span> Fetching multi-modal raw text data from global macro news stream...</p>
+                    <p>[13:41:02.09] <span class="text-white">INFO:</span> Sentiment Vector parsed. 82.4% correlation with sudden liquidity dry-up pattern.</p>
+                    <p>[13:41:02.15] <span class="text-cyan-400">THOUGHT (CoT):</span> Standard linear indicators show trend continuation, but multi-agent game-theory matrix indicates institutional positioning trapped.</p>
+                    <p>[13:41:02.22] <span class="text-amber-400">DECISION:</span> Initiate delta-neutral options hedging ahead of standard human awareness.</p>
+                    <p>[13:41:02.25] <span class="text-emerald-400">EXECUTION:</span> Order routing via ultra-low latency API. Done. (Latency: 0.12ms)</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="py-24 px-6 max-w-3xl mx-auto text-center border-t border-gray-900">
-        <h2 class="text-3xl font-bold text-white">开启量化投资的新时代</h2>
-        <p class="text-gray-400 mt-4 mb-10">无论您是寻求优质阿尔法策略的基金机构，还是希望升级内生AI能力的券商，我们都提供全方位的深度定制合作。</p>
+    <!-- 接入资本：对接通道 -->
+    <section id="invest" class="py-20 px-6 max-w-3xl mx-auto text-center border-t border-gray-900">
+        <h2 class="text-3xl font-bold text-white uppercase">将资本托付给未来的主宰</h2>
+        <p class="text-gray-400 text-xs mt-4 mb-10 code-font">AI-AGENT SWARM DOES NOT REQUIRE TRUST. IT REQUIRES PROTOCOL.</p>
         
-        <form class="bg-gray-900/50 border border-gray-800 p-8 rounded-2xl text-left space-y-6 backdrop-blur-sm" onsubmit="event.preventDefault(); alert('信息已收到，我们的量化客户经理会在 24 小时内与您联系！');">
-            <div class="grid sm:grid-cols-2 gap-6">
-                <div>
-                    <label class="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">机构名称 / 贵姓</label>
-                    <input type="text" required class="w-full bg-[#0B0F19] border border-gray-800 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-blue-500 transition" placeholder="例如：某某私募基金">
-                </div>
-                <div>
-                    <label class="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">联系方式 (微信/手机/邮箱)</label>
-                    <input type="text" required class="w-full bg-[#0B0F19] border border-gray-800 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-blue-500 transition" placeholder="请留下您的首选联系方式">
-                </div>
+        <form class="bg-gray-900/20 border border-gray-900 p-8 rounded-xl text-left space-y-6" onsubmit="event.preventDefault(); alert('资本接入请求已进入系统队列，自主审计AI正在评估您的链上/离岸资本合法性...');">
+            <div>
+                <label class="block text-xs font-semibold uppercase tracking-widest text-gray-500 mb-2 code-font">接入实体公钥 / 电子信箱</label>
+                <input type="text" required class="w-full bg-black border border-gray-900 rounded px-4 py-3 text-xs code-font text-white focus:outline-none focus:border-emerald-500 transition" placeholder="ENTER PUBLIC KEY OR EMAIL">
             </div>
             <div>
-                <label class="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-2">合作意向</label>
-                <select class="w-full bg-[#0B0F19] border border-gray-800 rounded-lg px-4 py-3 text-sm text-gray-300 focus:outline-none focus:border-blue-500 transition">
-                    <option>订阅 AI 策略信号矩阵</option>
-                    <option>定制化 AI 量化交易平台搭建</option>
-                    <option>联合产品发行 (FOF/MOM 合作)</option>
-                    <option>其他技术咨询</option>
+                <label class="block text-xs font-semibold uppercase tracking-widest text-gray-500 mb-2 code-font">配置资本类型</label>
+                <select class="w-full bg-black border border-gray-900 rounded px-4 py-3 text-xs code-font text-gray-400 focus:outline-none focus:border-emerald-500 transition">
+                    <option>机构离岸法币资本 (USD/EUR/HKD)</option>
+                    <option>去中心化加密资产 (Web3 Core Native Asset)</option>
+                    <option>计算资源/GPU算力置换 (算力出资)</option>
                 </select>
             </div>
-            <button type="submit" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-medium py-3 rounded-lg transition shadow-lg shadow-blue-600/10">
-                提交试用申请
+            <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold uppercase tracking-widest py-4 rounded transition tracking-wider glow-effect">
+                向 AI 提出资本挂载请求
             </button>
         </form>
     </section>
 
-    <footer class="bg-[#070A12] border-t border-gray-900 text-gray-600 text-xs py-8 text-center">
-        <p>© 2026 AlphaAI Quantitative Technology Co., Ltd. 保留所有权利。</p>
-        <p class="mt-2 text-gray-700">投资有风险，入市需谨慎。AI 策略回测收益不代表未来实盘表现。</p>
+    <!-- 页脚 -->
+    <footer class="bg-black border-t border-gray-950 text-gray-700 text-xs py-8 text-center code-font">
+        <p>AUTONOMOUSAI IS A SELF-SUSTAINING DIGITAL ENTITY. NO PHYSICAL HEADQUARTERS.</p>
+        <p class="mt-2 text-gray-800">警告：硅基自主决策不保证盈利。纯概率博弈，人类参与请自行评估算法边界风险。</p>
     </footer>
 
+    <!-- 初始化 Lucide 图标与动态日志滚动模拟 -->
     <script>
         lucide.createIcons();
+
+        // 模拟 AI 思考链动态滚动刷新，增加极端科技感
+        const logBox = document.getElementById('log-box');
+        const simulatedLogs = [
+            "[13:41:03.01] <span class='text-white'>INFO:</span> Re-balancing neural architecture weight for Agent_#112.",
+            "[13:41:03.45] <span class='text-amber-500'>WARN:</span> High volatility anomaly detected in Shanghai/New York cross-market spread.",
+            "[13:41:04.12] <span class='text-cyan-400'>THOUGHT:</span> Exploiting human behavioral bias found in retail long liquidation cluster.",
+            "[13:41:04.14] <span class='text-emerald-400'>EXECUTION:</span> Executed 1,200 lots hedging buy orders via local API node.",
+            "[13:41:05.00] <span class='text-gray-600'>SYSTEM:</span> Compiling loss-gradient tensor for the next tick epoch."
+        ];
+        let index = 0;
+        setInterval(() => {
+            const newLog = document.createElement('p');
+            newLog.innerHTML = simulatedLogs[index % simulatedLogs.length].replace('[13:41:', `[${new Date().toLocaleTimeString()}`);
+            logBox.appendChild(newLog);
+            if (logBox.children.length > 8) {
+                logBox.removeChild(logBox.children[0]);
+            }
+            logBox.scrollTop = logBox.scrollHeight;
+            index++;
+        }, 2500);
     </script>
 </body>
 </html>
